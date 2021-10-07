@@ -158,7 +158,7 @@ main{
     width: inherit;
     height: 60px;
     /* background-color: #00439c;   */
-    padding-top: 3px;
+    padding-top: 0px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -264,7 +264,6 @@ main{
     height: 40px;
     display: flex;
     /* background-color: black; */
-    margin-top: 0px;
     border-radius: 20px;
     margin-left: auto;
     
@@ -378,7 +377,7 @@ main{
     font-size: 1em;
     text-align: center;
     border-radius: 11px;
-    border: solid 1px white;
+    border: solid 1px #6b30ff;
 
     background-color: #6b30ff;
     margin-top: 10px;
@@ -391,6 +390,7 @@ main{
     cursor: pointer;
     transform: scale(110%);
     transition: 0.5s ease-in-out;
+    box-shadow: 3px 3px 3px black;
 }
 .precos{
     width: 100px;
