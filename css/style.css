@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 body{
@@ -9,27 +10,31 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 header{
     width: 100%;
-    height: 80px;
-    background-color: rgba(0,67,156);     
+    height: 500px;
+    /* background-color: rgba(0,67,156);       */
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 #logo{
     width: 300px;
     height: 90px;
     padding-left: 20px;
-    /* background-color: brown;  */
+    /* background-color: brown;   */
     display: flex;
 }
+
+/* -------------MENU---------------- */
 #blocoMenu{
     width: 750px;
-    height: inherit;
+    height: 70px;
     
-    /* background-color: khaki; */
+    /* background-color: khaki;   */
 }
 #listMenu{
     width: inherit;
@@ -37,7 +42,7 @@ header{
     color: white;
     font-size: 1.2em;
     font-family: Comic 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* background-color: turquoise;   */
+    /* background-color: turquoise;    */
 
     display: flex;
     flex-direction: row;
@@ -50,6 +55,8 @@ header{
 #listMenu li{
     width: inherit;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #00439c;
+    
     border-radius: 20px;
     height: 30px;
     text-align: center;
@@ -58,22 +65,61 @@ header{
     flex-direction: column;
     justify-content: center;
 }
-#listMenu li:hover{
+#listMenu a{
+    text-decoration: none;
+    color: white;
+} 
+#listMenu a:hover{
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 4px;
+    box-sizing: border-box;
+    height: 30px;
     cursor: pointer;
-    color: #506dce;
-    background-color: white;
-    color: black;
-    transition: .2s;
+    color: #00439c;
+    background-color: white; 
+    transition: 0s;
 }
+/* ---------IMAGEM INICIAL---------------- */
+#imgSite{
+    width: 100%;
+    height: 660px;
+    z-index: 999;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/977081.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+/* ---------REDES SOCIAIS----------- */
 #blocoRedesSociais{
-    background-color: lightcoral;
+    margin-top: 15px;
+    width: 180px;
+    height: 40px;
+    margin-left: 25px;
+    /* background-color: tomato; */
+    display: flex;
+    flex-direction: row;
 
 }
-
+.redesSociais{
+    width: 45px;
+    height: inherit;
+    margin-left: 10px;
+}
+.icon{
+    width: inherit;
+    height: inherit;
+}
+.icon:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    transform: scale(115%);
+}
 
 main{
     width: 100%;
-    height: 2400px;
+    /* height: 2400px; */
     /* background-color: brown; */
     margin-left: auto;
     margin-right: auto;
@@ -82,126 +128,158 @@ main{
     flex-grow: 1;
     align-items: center;
 }
-/* ----------------------IMAGEM INICIAL-------------------------------------- */
-#imgSite{
-    width: 100%;
-    height: 660px;
-    z-index: 999;
-    background-image: url(../img/977081.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-}
 
-/* ----------------------SEÇÃO DOS PRODUTOS-------------------------------------- */
+
+/* ---------------------------------SEÇÃO DOS PRODUTOS-------------------------------------------- */
 #secaoProdutos{
     width: 100%;
     height: 670px;
     /* background-color: lightcoral;   */
-     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../img/battlefield.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../img/battlefield.jpg);
     background-size: cover;
-    background-attachment: fixed; 
+    background-attachment: fixed;
 }
 #blocoDePesquisas{
     width: inherit;
     height: 60px;
-    background-color: #00439c; 
+    /* background-color: #00439c;   */
     padding-top: 5px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-
+    align-items: center;
+    
 }
-
-
-
+/* ---------MENU DROP----------------- */
 #menuBurguer{
-    width: 60px;
-    height: 50px;
+    width: 50px;
+    height: 40px;
     background-color: white;
+    background-image: url(../img/hamburger-menu.png);
+    background-size: cover;
+    background-position: center;
+    margin-top: 5px;
     margin-left: 20px;
+    box-shadow: 3px 3px 5px black;
 
-    border-radius: 8px;
+    /* border: solid 1px black; */
+    border-radius: 15px;
     position: absolute;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#checkbox_menu{
-    position: absolute;
-    opacity: 0;
+#menu{
+    width: inherit;
+    height: inherit;
 }
-
-label{
-    cursor: pointer;
-    position: relative;
-    display: block;
-    height: 25px;
-    width: 30px;
-}
-label span{
-    position: absolute;
-    display: block;
-    height: 5px;
-    width: 100%;
-    border-radius: 30px;
-    background-color: black;
-    transition: 0.25s ease-in-out;
-}
-label span:nth-child(1){
-    top: 0;
-}
-label span:nth-child(2){
-    top: 10px;
-}
-label span:nth-child(3){
-    top: 20px;
-}
-#checkbox_menu:checked + label span:nth-child(1){
-    transform: rotate(-45deg);
-    top: 10px;
-}
-#checkbox_menu:checked + label span:nth-child(2){
-    opacity: 0;
-}
-#checkbox_menu:checked + label span:nth-child(3){
-    transform: rotate(45deg);
-    top: 10px;
-}
-#barraDePesquisa{
-    width: 40vw;
+.menuItem{
+    list-style: none;
+    width: inherit;
     height: 40px;
-    display: flex;
-    margin-left: 800px;
-    margin-top: 5px;
-    border-radius: 20px;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+    margin-left: 5px;
     
 }
+.menuItem:hover{
+    /* background-color: black; */
+    color: white;
+    cursor: pointer;
+    list-style: none;
+    
+}
+.menuItem:hover > #caixaSubMenu{
+    /*    display: block;*/
+    /* Permite manipular a transparencia do elemento */
+    opacity: 1;
+    /* Permite aparecer com o elemento que foi oculto */
+    visibility: visible;
+    transition: 1s;
+    margin-left: 50px;
+
+    
+}
+#caixaSubMenu{
+    width: 450px;
+    height: 30px;
+    /* background-color: lawngreen;  */
+    
+    margin-top: -5px;
+/*    display: none;*/
+    opacity: 0;
+    visibility: hidden;
+}
+#caixaSubMenu ul{
+    width: inherit;
+    height: inherit;
+    /* background-color: khaki; */
+    padding-left: 5px;
+    padding-top: 3px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    box-sizing: border-box;
+}
+#caixaSubMenu li{
+    width: 200px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: #00439c;
+    margin-right: 15px;
+    padding-top: 2px;
+    list-style: none;
+    box-sizing: border-box;
+}
+#caixaSubMenu li:hover{
+    cursor: pointer;
+    border-radius: 10px;
+    color: #00439c;
+    background-color: white;
+    transition: 0.3s;
+    box-shadow: 5px 5px 10px black;
+}
+/* ---------BARRA DE PESQUISA----------- */
+#barraDePesquisa{
+    width: 300px;
+    height: 40px;
+    display: flex;
+    /* background-color: black; */
+    margin-top: 5px;
+    border-radius: 20px;
+    margin-left: auto;
+    
+}
+#barraDePesquisa:hover{
+    transform: scale(110%);
+    transition: 0.2s;
+}
 #barraDePesquisa input{
+    font-size: 1.5em;
     height: inherit;
     width: 200px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    border: solid 0 ;
+    border: 0;
+    padding-left: 5px;
+    box-sizing: border-box;
+    /* border-right: solid 1px black; */
+    /* margin-left: 500px; */
 }
 #iconPesquisa{
-    height: inherit;
-    width: 50px;
-     background-color: white;
+    width: 45px;
+    height: 40px;
     background-image: url(../img/lupa1.png);
     background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-
+    background-position: center;
+    background-color: white;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-
-    display: flex;
 }
-
-
 #blocoProdutos{
     width: inherit;
     height: 610px;
@@ -213,8 +291,12 @@ label span:nth-child(3){
     flex-grow: 1;
     overflow: auto;
     flex-wrap: wrap;
+    box-sizing: border-box;
 }
-/* ----------------------CARD PRODUTO-------------------------------------- */
+#blocoProdutos::-webkit-scrollbar{
+    background-color: transparent;
+}
+/* --------CARD PRODUTO----------------- */
 .cardProduto{
     width: 250px;
     height: 380px;
@@ -233,7 +315,6 @@ label span:nth-child(3){
     transform: scale(105%);
     transition: 0.3s ease-in-out;
 }
-
 .imgProduto{
     width: 90%;
     height: 220px;
@@ -291,7 +372,6 @@ label span:nth-child(3){
     justify-content: center;
     align-items: center;
 }
-
 .botaoSaibaMais input:hover {
     cursor: pointer;
     transform: scale(110%);
@@ -330,7 +410,9 @@ label span:nth-child(3){
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
-/* ----------------------SEÇÃO DA EMPRESA-------------------------------------- */
+
+
+/* ---------------------------------SEÇÃO DA EMPRESA-------------------------------------- */
 #secaoEmpresa{
     width: 100%;
     height: 350px;
@@ -341,8 +423,9 @@ label span:nth-child(3){
 #tituloEmpresa{
     width: 100%;
     height: 70px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.7em;
+    font-weight: bold;
     color: white;
     background-color: #00439c;
     padding-top: 5px;
@@ -363,7 +446,7 @@ label span:nth-child(3){
     height: inherit;
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.3em;
     background-color:white;
     display: flex;
     justify-content: center;
@@ -376,16 +459,16 @@ label span:nth-child(3){
     height: inherit;
     color: black;
     /* background-color: darkslateblue; */
-    background-image: url(../img/sony-logo-1.png);
+    background-image: url(../img/playstation2.png);
     background-position: center;
-    background-size: 500px;
+    background-size: 230px;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* ----------------------SEÇÃO DAS PROMOÇÕES-------------------------------------- */
+/* -------------------------------SEÇÃO DAS PROMOÇÕES-------------------------------------- */
 #secaoPromocoes{
     width: 100%;
     height: 540px;
@@ -409,6 +492,9 @@ label span:nth-child(3){
     align-items: center;
     overflow: auto;
     flex-wrap: wrap;
+}
+#cardsPromocoes::-webkit-scrollbar{
+    background-color: transparent;
 }
 .linha{
     width: 90%;
@@ -434,7 +520,7 @@ label span:nth-child(3){
     display: flex;
     justify-content: flex-start;
 }
-/* ----------------------CARD COM PROMOÇÃO-------------------------------------- */
+/* --------CARD COM PROMOÇÃO------------ */
 .precoAtualProduto{
     width: 100%;
     height: inherit;
@@ -449,33 +535,40 @@ label span:nth-child(3){
 
 }
 
-/* ----------------------SEÇÃO DOS DESTAQUES DA LOJA-------------------------------------- */
+/* ---------------------------SEÇÃO DOS DESTAQUES DA LOJA-------------------------------------- */
 #destaquesDaLoja{
     width: 100%;
-    height: 500px;
-    /* background-color: lightseagreen; */
+    height: 350px;
+    /* background-color: lightseagreen;  */
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    
 }
 .tituloDestaques{
     width: 100%;
+    height: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
     font-size: 2em;
     font-weight: bold;
-    /* background-color: white; */
-    padding-top: 5px;
+    /* background-color: lightblue;  */
+    /* padding-top: 5px; */
     padding-left: 30px;
     box-sizing: border-box;
     display: flex;
-    justify-content: flex-start;
+}
+#cardsDestaques{
+    height: 260px;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
 }
 .destaques{
     width: 200px;
     height: 250px;
     /* background-color: lightskyblue; */
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -507,4 +600,233 @@ label span:nth-child(3){
     font-size: 1.5em;
     text-align: center;
 }
+
+/* ---------------------------SEÇÃO DAS NOSSAS LOJAS-------------------------------------- */
+#nossasLojas{
+    width: 100%;
+    height: 410px;
+    background-color: #00439c; 
+    display: flex;
+    flex-direction: row;
+}
+
+/* --------NOSSAS LOJAS À ESQUERDA------------ */
+#blocoLojas{
+    width: 50%;
+    height: inherit;
+    /* background-color: khaki; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#tituloLoja{
+    width: 100%;
+    height: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    /* background-color: green;   */
+    /* padding-top: 5px; */
+    padding-left: 30px;
+    box-sizing: border-box;
+    display: flex;
+}
+#blocoCardsLojas{
+    width: 100%;
+    height: inherit;
+    /* background-color: tomato; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cardLojas{
+    width: 400px;
+    height: 190px;
+    background-color: #506dce; 
+    margin-top: 35px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+}
+.cardLojas:hover{
+    transform: scale(110%);
+    transition: 0.3s ease-in-out;
+    box-shadow: 5px 5px 5px #001e6d;
+}
+.unidade{
+    width: 100%;
+    height: 40px;
+    /* background-color: firebrick; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 3px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px white;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+}
+.lojasEnderecos{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+}
+.imgLojas{
+    width: 150px;
+    height: inherit;
+    background-color: lawngreen;
+    border-radius: 150px;
+    display: flex;
+
+}
+.imgLoja{
+    width: inherit;
+    height: inherit;
+    border-radius: 150px;
+}
+.local{
+    width: 250px;
+    height: inherit;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: dodgerblue; */
+    display: flex;
+    padding-left: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+
+}
+.local::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+
+/* --------NOSSAS CONTATOS À DIREITA------------ */
+#blocoContatos{
+    width: 50%;
+    height: inherit;
+    /* background-color: lightcoral;  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#tituloContatos{
+    width: 100%;
+    height: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    /* background-color: lightblue;   */
+    /* padding-top: 5px; */
+    padding-left: 30px;
+    box-sizing: border-box;
+    display: flex;
+}
+.blocosContatos{
+    width: 100%;
+    height: 390px;
+    /* background-color: hotpink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-left: solid 1px white;
+
+}
+.campoContato{
+    width: 500px;
+    height: 40px;
+    /* background-color: gold; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.requisito{
+    text-align: right;
+    width: 140px;
+    height: inherit;
+    /* background-color: firebrick; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    margin-right: 10px;
+    color: white;
+}
+.campoContato input{
+    padding-left: 5px;
+    border-radius: 10px;
+    font-size: 1.4em;
+    border: 0;
+    width: 350px;
+    height: 30px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+#botaoEnviar input{
+    width: 150px;
+    height: 60px;
+    color: #00439c;
+    font-family: comic sans ms;
+    font-size: 1.8em;
+    text-align: center;
+    border-radius: 11px;
+    border: solid 1px white;
+
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#botaoEnviar input:hover {
+    cursor: pointer;
+    transform: scale(110%);
+    transition: 0.5s ease-in-out;
+}
+
+/* ---------------------------SEÇÃO DO RODAPÉ-------------------------------------- */
+footer{
+    /* background-color: dimgray; */
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+#logoRodape{
+    width: 200px;
+    height: inherit;
+    background-image: url(../img/sony-rodape.PNG);
+    background-size: cover;
+    background-position: center;
+}
+#textoRodape{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 1.2em;
+}
+.linhaRodape{
+    width: 90%;
+    height: 3px;
+    background-color: black;
+    border-radius: 30px;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+  
+
+
+
 

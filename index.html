@@ -9,48 +9,65 @@
 </head>
 <body>
     <!-- MENU DO SITE-->
-    <header>
-        <div id="logo">
-           <img src="img/logo.png">
-        </div>
-        <nav id="blocoMenu">
-            <ul id="listMenu">
-                <li>A EMPRESA</li>
-                <li>LOJAS</li>
-                <li>PROMOÇÕES</li>
-                <li>DESTAQUES</li>
-                <li>CONTATOS</li>
-            </ul>
-        </nav>
-        <div id="blocoRedesSociais">
-        
-        </div>
-    </header>
+    <div id="imgSite">
+        <header>
+            <div id="logo">
+               <img src="img/logo.png">
+            </div>
+            <nav id="blocoMenu">
+                <ul id="listMenu">
+                    <li><a href="#secaoEmpresa" class=".anchor">A EMPRESA</a></li>
+                    <li><a href="#nossasLojas">LOJAS</a></li>
+                    <li><a href="#secaoPromocoes">PROMOÇÕES</a></li>
+                    <li><a href="#destaquesDaLoja">DESTAQUES</a></li>
+                    <li><a href="#nossasLojas">CONTATOS</a></li>
+                </ul>
+            </nav>
+            <div id="blocoRedesSociais">
+                <div class="redesSociais">
+                    <img class="icon" src="img/faceboook.png" alt="Facebook">
+                </div>
+                <div class="redesSociais">
+                    <img class="icon" src="img/insta.png" alt="Instagram">
+                </div>
+                <div class="redesSociais">
+                    <img class="icon" src="img/twitter1.png" alt="Twitter">
+                </div>
+            </div>
+        </header>
+    </div>
     <!-- CONTEÚDOS DO SITE -->
     <main>
-        <!-- IMAGEM DO SITE -->
-        <section id="imgSite">
-            
-        </section>
         <!-- PRODUTOS DO SITE -->
         <section id="secaoProdutos">
+            <!-- BLOCO COM MENU DROP E BARRA DE PESQUISA -->
             <div id="blocoDePesquisas">
+                <!-- MENU DROP/BURGUER -->
                 <div id="menuBurguer">
-                    <input type="checkbox" id="checkbox_menu">
-                    <label for="checkbox_menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
+                    <ul id="menu">
+                        <li class="menuItem">
+                            <div id="caixaSubMenu">
+                                <ul>
+                                    <li>Terror</li>
+                                    <li>RPG</li>
+                                    <li>Ficção</li>
+                                    <li>Ação</li>
+                                    <li>Esporte</li> 
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
+                <!-- BARRA DE PESQUISA -->
                 <div id="barraDePesquisa">
                     <input type="text" name="barraPesquisa" value="" placeholder="     Pesquisar">
                     <div id="iconPesquisa">
-                        
                     </div>
                 </div>
             </div>
+            <!-- BLOCO DOS PRODUTOS -->
             <div id="blocoProdutos">
+                <!-- CARDS DOS PRODUTOS -->
                 <div class="cardProduto">
                     <div class="imgProduto">
                         
@@ -395,65 +412,150 @@ Formou com a sueca Ericsson uma holding para a produção de telefones celulares
                 </div>
             </div>
         </section>
-        <!-- DESTAQUES DA LOJA -->
         <div class="linha">
         </div>
+        <!-- DESTAQUES DA LOJA -->
         <section id="destaquesDaLoja">
             <div class="tituloDestaques">
                 DESTAQUES DA LOJA
             </div>
-            <div class="destaques">
-                <div class="imgDestaque">
-
+            <div id="cardsDestaques">
+                <div class="destaques">
+                    <div class="imgDestaque">
+    
+                    </div>
+                    <div class="tituloImgDestaque">
+                        Terror
+                    </div>
                 </div>
-                <div class="tituloImgDestaque">
-                    TERROR
+                <div class="destaques">
+                    <div class="imgDestaque">
+    
+                    </div>
+                    <div class="tituloImgDestaque">
+                        RPG
+                    </div>
                 </div>
-            </div>
-            <div class="destaques">
-                <div class="imgDestaque">
-
+                <div class="destaques">
+                    <div class="imgDestaque">
+    
+                    </div>
+                    <div class="tituloImgDestaque">
+                        Ficção
+                    </div>
                 </div>
-                <div class="tituloImgDestaque">
-                    TERROR
+                <div class="destaques">
+                    <div class="imgDestaque">
+    
+                    </div>
+                    <div class="tituloImgDestaque">
+                        Ação
+                    </div>
                 </div>
-            </div>
-            <div class="destaques">
-                <div class="imgDestaque">
-
-                </div>
-                <div class="tituloImgDestaque">
-                    TERROR
-                </div>
-            </div>
-            <div class="destaques">
-                <div class="imgDestaque">
-
-                </div>
-                <div class="tituloImgDestaque">
-                    TERROR
-                </div>
-            </div>
-            <div class="destaques">
-                <div class="imgDestaque">
-
-                </div>
-                <div class="tituloImgDestaque">
-                    TERROR
+                <div class="destaques">
+                    <div class="imgDestaque">
+    
+                    </div>
+                    <div class="tituloImgDestaque">
+                        Esporte
+                    </div>
                 </div>
             </div>
         </section>
         <!-- NOSSAS LOJAS -->
-        <section>
-            
-        </section>
-        <section>
-            
+        <section id="nossasLojas">
+            <!-- UNIDADES DA LOJA Á ESQUERDA DA SEÇÃO -->
+            <div id="blocoLojas">
+                <div id="tituloLoja">
+                    NOSSAS LOJAS
+                </div>
+                <div id="blocoCardsLojas">
+                    <div class="cardLojas">
+                        <div class="unidade">
+                            UNIDADE JANDIRA
+                        </div>
+                        <div class="lojasEnderecos">
+                            <div class="imgLojas">
+                                <img class="imgLoja" src="img/loja1.jpg" alt="Loja 1">
+                            </div>
+                            <div class="local">
+                                <p>
+                                    Rua tal,
+                                    Bairro tal, numero tal
+                                    CEP tal
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardLojas">
+                        <div class="unidade">
+                            UNIDADE BARUERI
+                        </div>
+                        <div class="lojasEnderecos">
+                            <div class="imgLojas">
+                                <img class="imgLoja" src="img/loja1.jpg" alt="Loja 1">
+                            </div>
+                            <div class="local">
+                                <p>
+                                    Rua tal,
+                                    Bairro tal, numero tal
+                                    CEP tal
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CONTATOS A DIREITA DA SEÇÃO -->
+            <div id="blocoContatos">
+                <div id="tituloContatos">
+                    ENTRE EM CONTATO
+                </div>
+                <div class="blocosContatos">
+                    <div class="campoContato">
+                        <div class="requisito">
+                            <label>
+                                Nome: 
+                            </label>
+                        </div>
+                        <div>
+                            <input type="text" value="" maxlength="100">
+                        </div>
+                    </div>
+                    <div class="campoContato">
+                        <div class="requisito">
+                            <label>
+                                E-mail: 
+                            </label>
+                        </div>
+                        <div>
+                            <input type="email" value="" maxlength="100">
+                        </div>
+                    </div>
+                    <div class="campoContato">
+                        <div class="requisito">
+                            <label>
+                                Celular: 
+                            </label>
+                        </div>
+                        <div>
+                            <input type="tel" value="" maxlength="15">
+                        </div>
+                    </div>
+                    <div id="botaoEnviar">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <!-- RODAPÉ DO SITE -->
     <footer>
-
+        <div id="logoRodape">
+        </div>
+        <div id="textoRodape">
+            PLAY has no limites. Copyright © George Leal | 2021
+        </div>
     </footer>
 </body>
 </html>
